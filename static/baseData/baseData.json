@@ -1,0 +1,478 @@
+{
+    "data": [
+        {
+            "name": "office_dept_num",
+            "comment": "机关部门数"
+        },
+        {
+            "name": "three_project_num",
+            "comment": "“三定方案”监区机构编制数"
+        },
+        {
+            "name": "true_area_num",
+            "comment": "实有监区数"
+        },
+        {
+            "name": "criminal_area_num",
+            "comment": "押犯监区数"
+        },
+        {
+            "name": "no_criminal_area_num",
+            "comment": "非押犯监区数"
+        },
+        {
+            "name": "all_police_num",
+            "comment": "监狱警察总数"
+        },
+        {
+            "name": "male_police_num",
+            "comment": "男警察数"
+        },
+        {
+            "name": "female_police_num",
+            "comment": "女警察数"
+        },
+        {
+            "name": "office_police_num",
+            "comment": "机关警察数"
+        },
+        {
+            "name": "base_police_num",
+            "comment": "基层岗位警察"
+        },
+        {
+            "name": "jianqu_police_num",
+            "comment": "监区警察数"
+        },
+        {
+            "name": "hospital_police_num",
+            "comment": "监狱医院人数"
+        },
+        {
+            "name": "cmd_center_police_num",
+            "comment": "指挥中心人数"
+        },
+        {
+            "name": "regimental_police_team_num",
+            "comment": "特警队人数"
+        },
+        {
+            "name": "warning_edu_base_police_num",
+            "comment": "警示教育基地人数"
+        },
+        {
+            "name": "always_off_duty_police_num",
+            "comment": "长期在编不在岗人员"
+        },
+        {
+            "name": "police_remark",
+            "comment": "警察项备注"
+        },
+        {
+            "name": "prison_police_num_two",
+            "comment": "监狱警察总数（3辅情况）"
+        },
+        {
+            "name": "male_auxiliary_police_num",
+            "comment": "男性人数辅警"
+        },
+        {
+            "name": "female_auxiliary_police_num",
+            "comment": "女性人数辅警"
+        },
+        {
+            "name": "area_auxiliary_police_num",
+            "comment": "监区辅警"
+        },
+        {
+            "name": "center_auxiliary_police_num",
+            "comment": "指挥中心辅警"
+        },
+        {
+            "name": "swat_team_auxiliary_polie_num",
+            "comment": "特警队辅警"
+        },
+        {
+            "name": "prison_hospital_auxiliary_police_num",
+            "comment": "监狱医院辅警"
+        },
+        {
+            "name": "else_auxiliary_police_num",
+            "comment": "其他辅警"
+        },
+        {
+            "name": "registered_criminal_num",
+            "comment": "监狱在册犯人总数"
+        },
+        {
+            "name": "other_add_criminal_num_24h",
+            "comment": "从省外调入"
+        },
+        {
+            "name": "temporary_outside_prison_criminal_num",
+            "comment": "暂予监外执行"
+        },
+        {
+            "name": "add_temporary_outside_prison_criminal_num",
+            "comment": "新增暂予监外执行"
+        },
+        {
+            "name": "else_outside_num",
+            "comment": "其他"
+        },
+        {
+            "name": "long_time_escape_criminal_num",
+            "comment": "历年在逃"
+        },
+        {
+            "name": "again_detain_num",
+            "comment": "监外执行再收押"
+        },
+        {
+            "name": "catch_back_criminal_num_24h",
+            "comment": "捕回在逃"
+        },
+        {
+            "name": "outside_release_num",
+            "comment": "监外执行刑释"
+        },
+        {
+            "name": "outside_death_num",
+            "comment": "监外执行死亡"
+        },
+        {
+            "name": "outside_else_num",
+            "comment": "监外执行其他情况"
+        },
+        {
+            "name": "in_prison_total_criminal_num",
+            "comment": "监狱在押罪犯"
+        },
+        {
+            "name": "new_criminal_num_24h",
+            "comment": "新收押"
+        },
+        {
+            "name": "from_other_area_in_num",
+            "comment": "从狱内其他监区调入"
+        },
+        {
+            "name": "from_other_prison_in_num",
+            "comment": "从省内其他监狱调入"
+        },
+        {
+            "name": "from_outside_in_count",
+            "comment": "从省外其他监狱调入"
+        },
+        {
+            "name": "produce_labor_criminal_num",
+            "comment": "生产性劳动"
+        },
+        {
+            "name": "business_labor_criminal_num",
+            "comment": "事务性劳动"
+        },
+        {
+            "name": "be_hospital_in_prison_criminal_num",
+            "comment": "狱内住院"
+        },
+        {
+            "name": "ju_center_in_hospital_criminal_num",
+            "comment": "局中心住院"
+        },
+        {
+            "name": "in_society_hospital_criminal_num",
+            "comment": "住社会医院"
+        },
+        {
+            "name": "criminal_study_num",
+            "comment": "罪犯学习数"
+        },
+        {
+            "name": "criminal_rest_num",
+            "comment": "罪犯休息数"
+        },
+        {
+            "name": "lock_criminal_num",
+            "comment": "禁闭"
+        },
+        {
+            "name": "isolation_criminal_num",
+            "comment": "隔离"
+        },
+        {
+            "name": "outside_see_patient_num",
+            "comment": "外出看病"
+        },
+        {
+            "name": "especially_out_prison_count",
+            "comment": "特许离监"
+        },
+        {
+            "name": "accompany_num",
+            "comment": "陪护"
+        },
+        {
+            "name": "younth_num",
+            "comment": "未管所收容教养犯罪少年"
+        },
+        {
+            "name": "normal_release_criminal_num_24h",
+            "comment": "一般刑释"
+        },
+        {
+            "name": "release_on_parole_criminal_num_24h",
+            "comment": "假释"
+        },
+        {
+            "name": "die_criminal_num_24h",
+            "comment": "死亡"
+        },
+        {
+            "name": "to_other_jianqu_in_province_criminal_num_24h",
+            "comment": "调往狱内其他监区"
+        },
+        {
+            "name": "to_other_prison_in_province_criminal_num_24h",
+            "comment": "调往省内其他监狱"
+        },
+        {
+            "name": "to_outside_criminal_num_24h",
+            "comment": "调往省外其他监狱"
+        },
+        {
+            "name": "to_outside_xinjiang_num",
+            "comment": "调往新疆"
+        },
+        {
+            "name": "solution_to_review_num",
+            "comment": "解回重审"
+        },
+        {
+            "name": "other_criminal_num",
+            "comment": "其他"
+        },
+        {
+            "name": "slack_manage_criminal_num",
+            "comment": "宽管级罪犯"
+        },
+        {
+            "name": "normal_manage_criminal_num",
+            "comment": "普管级罪犯"
+        },
+        {
+            "name": "hard_manage_criminal_num",
+            "comment": "严管级罪犯"
+        },
+        {
+            "name": "no_level_criminal_num",
+            "comment": "未定级罪犯"
+        },
+        {
+            "name": "level_remark",
+            "comment": "分管等级的备注"
+        },
+        {
+            "name": "drug_criminal_num",
+            "comment": "涉毒罪犯"
+        },
+        {
+            "name": "female_criminal_num",
+            "comment": "女犯"
+        },
+        {
+            "name": "foreign_criminal_num",
+            "comment": "外国籍罪犯"
+        },
+        {
+            "name": "hiv_criminal_num",
+            "comment": "艾滋病罪犯"
+        },
+        {
+            "name": "duty_crime_criminal_num",
+            "comment": "职务犯"
+        },
+        {
+            "name": "nonage_criminal_num",
+            "comment": "未成年犯"
+        },
+        {
+            "name": "shehei_criminal_num",
+            "comment": "涉黑犯"
+        },
+        {
+            "name": "shee_criminal_num",
+            "comment": "涉恶犯"
+        },
+        {
+            "name": "has_military_police_te_criminal_num",
+            "comment": "具有军、警、特经历罪犯限制减刑犯"
+        },
+        {
+            "name": "limit_reduce_prison_term_criminal_num",
+            "comment": "限制减刑犯"
+        },
+        {
+            "name": "other_criminal_type_num",
+            "comment": "其他"
+        },
+        {
+            "name": "criminal_type_remark",
+            "comment": "罪犯类型备注"
+        },
+        {
+            "name": "all_illegal_num",
+            "comment": "总违规违纪人数"
+        },
+        {
+            "name": "normal_illegal_num",
+            "comment": "普通违规人数"
+        },
+        {
+            "name": "add_lock_num",
+            "comment": "新增禁闭"
+        },
+        {
+            "name": "reduce_lock_num",
+            "comment": "解除禁闭"
+        },
+        {
+            "name": "lock_to_isolation_num",
+            "comment": "禁闭转隔离"
+        },
+        {
+            "name": "add_isolaltion_num",
+            "comment": "新增隔离"
+        },
+        {
+            "name": "reduce_isolation_num",
+            "comment": "解除隔离"
+        },
+        {
+            "name": "isolation_to_lock_num",
+            "comment": "隔离转禁闭"
+        },
+        {
+            "name": "liang_wei_num",
+            "comment": "罪犯两违数量"
+        },
+        {
+            "name": "liang_wei_area_num",
+            "comment": "两违监区"
+        },
+        {
+            "name": "liang_wei_tejing_num",
+            "comment": "两违特警"
+        },
+        {
+            "name": "liang_wei_center_num",
+            "comment": "两违指挥中心"
+        },
+        {
+            "name": "liang_wei_dept_num",
+            "comment": "两违职能部门"
+        },
+        {
+            "name": "liang_wei_super_num",
+            "comment": "两违上级部门"
+        },
+        {
+            "name": "san_dan_num",
+            "comment": "三单数量"
+        },
+        {
+            "name": "san_dan_area_num",
+            "comment": "三单监区"
+        },
+        {
+            "name": "san_dan_tejing_num",
+            "comment": "三单特警"
+        },
+        {
+            "name": "san_dan_center_num",
+            "comment": "三单指挥中心"
+        },
+        {
+            "name": "san_dan_dept_num",
+            "comment": "三单职能部门"
+        },
+        {
+            "name": "san_dan_super_num",
+            "comment": "三单上级部门"
+        },
+        {
+            "name": "si_peng_num",
+            "comment": "四碰数量"
+        },
+        {
+            "name": "si_peng_area_num",
+            "comment": "四碰监区数量"
+        },
+        {
+            "name": "si_peng_tejing_num",
+            "comment": "四碰特警数量"
+        },
+        {
+            "name": "si_peng_center_num",
+            "comment": "四碰指挥中心数量"
+        },
+        {
+            "name": "si_peng_dept_num",
+            "comment": "四碰职能部门数量"
+        },
+        {
+            "name": "si_peng_super_num",
+            "comment": "四碰上级部门数量"
+        },
+        {
+            "name": "civil_servant_not_police_num",
+            "comment": "公务员（非警察）人数"
+        },
+        {
+            "name": "error_state",
+            "comment": "当前记录是否存在数据异常:0:正常 1：异常"
+        },
+        {
+            "name": "civil_servant_not_police_remark",
+            "comment": "公务员（非警察）_备注"
+        },
+        {
+            "name": "assistant_police_other_remark",
+            "comment": "(三岗)辅警_其他_备注"
+        },
+        {
+            "name": "today_prison_manage_remark",
+            "comment": "当日监狱管理情况_备注"
+        },
+        {
+            "name": "registered_prisoner_sum_other_remark",
+            "comment": "监狱在册犯人总数其他_备注"
+        },
+        {
+            "name": "prison_execute_other_remark",
+            "comment": "监外执行其他情况_备注"
+        },
+        {
+            "name": "out_of_prison_other_remark",
+            "comment": "离监其他_备注"
+        },
+        {
+            "name": "in_prison_criminal_other_remark",
+            "comment": "监狱在押罪犯_备注"
+        },
+        {
+            "name": "always_off_duty_police_remark",
+            "comment": "其他(长期在编不在岗人员) _备注"
+        },
+        {
+            "name": "police_base_information_remark",
+            "comment": "警察基本信息备注"
+        },
+        {
+            "name": "assistant_police_remark",
+            "comment": "(三岗)辅警_备注"
+        }
+    ],
+    "msg": "success",
+    "status": 0
+}

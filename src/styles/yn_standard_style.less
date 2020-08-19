@@ -1,0 +1,405 @@
+/* 项目中页面最外层div类名，及标题的类名 */
+.standard {
+  .yn_page {
+    padding: 1rem;
+    padding: 20px;
+  }
+  .yn_page_title {
+    display: block;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+  .el-radio-button__inner{
+    font-size: 1.1rem;
+    padding: 1rem 1.2rem;
+}
+  /* 修改ui框架的属性 */
+  /* 项目中用到的table都需要添加.yn_table类名保证字体自适应 */
+  .yn_table {
+    font-size: 1.1rem !important;
+  }
+  .yn_table.el-table {
+    font-size: 1.1rem !important;
+  }
+  /* el-table的行高和padding */
+  .yn_table.el-table .cell {
+    line-height: 1.5rem !important;
+  }
+  .yn_table.el-table td,
+  .yn_table.el-table th {
+    padding: 0.5rem 0 !important;
+  }
+  .yn_table.el-table th {
+    background: #dfedfe !important;
+    color: #000;
+    font-weight: normal;
+  }
+  // echart样式
+  .yn_charts {
+    position: relative;
+    margin-bottom: 10px;
+    border: 1px solid rgba(205, 221, 237, 1);
+    border-radius: 2px;
+    background: rgba(251, 252, 255, 1);
+    padding: 0 20px 20px 20px;
+  }
+  /* 所有btn需添加.yn_btn类名 */
+  
+  .yn_btn {
+    width: 7rem;
+    height: 2.1rem;
+    line-height: 0 !important;
+    border-radius: 2px !important;
+  }
+  /* type为text时的类名 */
+  .yn_text_btn {
+    width: 4rem;
+    height: 2.1rem;
+    line-height: 0 !important;
+  }
+  .el-button--primary {
+    background: #2b8bef !important;
+  }
+  /* el-button的内边距和字体调整 */
+  .yn_btn.el-button {
+    padding: 12px 0 14px 0;
+  }
+  .yn_btn span {
+    font-size: 1.1rem;
+  }
+  .yn_text_btn.el-button {
+    padding: 12px 0px;
+  }
+  .yn_text_btn span {
+    font-size: 1.1rem;
+  }
+  .yn_long_btn {
+    width: 10rem;
+  }
+
+  /* input的类名.yn_ipt，保证自适应 */
+  .yn_ipt .el-input__inner,
+  .yn_ipt.el-input__inner {
+    height: 2.5rem;
+    vertical-align: middle;
+    border: 1px solid rgb(153, 151, 151);
+    font-size: 1.1rem;
+    color: #000;
+  }
+  .yn_ipt.el-date-editor .el-range__icon,
+  .yn_ipt.el-date-editor .el-range-separator,
+  .yn_ipt.el-date-editor .el-range__close-icon {
+    line-height: 1.8rem !important;
+    font-size: 1.1rem !important;
+  }
+  .yn_ipt .el-range-input {
+    font-family: "MyriadProRegular";
+    font-size: 1.1rem !important;
+  }
+  span.el-range-separator {
+    z-index: 0;
+  }
+  .yn_ipt .el-textarea__inner {
+    border: 1px solid rgb(153, 151, 151);
+    font-size: 1.1rem;
+    color: #000;
+  }
+  .yn_ipt .el-input__inner:focus {
+    border: 1px solid rgb(153, 151, 151);
+  }
+  .yn_ipt .el-input__inner:hover {
+    border: 1px solid rgb(153, 151, 151);
+  }
+  .yn_ipt .el-input__icon {
+    line-height: 2.7rem;
+  }
+  /deep/.el-input-number {
+    height: 2.5rem;
+    width: 100%;
+    .el-input {
+      height: 2.5rem;
+      line-height: 30px;
+    }
+    .el-input__inner {
+      height: 2.5rem;
+      border: 1px solid rgb(153, 151, 151);
+    }
+  }
+
+  /* 表单的样式 */
+  .yn_form .el-form-item__label {
+    font-size: 1.1rem;
+    color: #000;
+  }
+
+  /* 弹出框的样式 */
+  .yn_dialog .el-dialog__title {
+    font-size: 1.3rem;
+  }
+
+  /* 穿梭框的样式 */
+  .yn_transfer
+    .el-transfer-panel
+    .el-transfer-panel__header
+    .el-checkbox
+    .el-checkbox__label
+    span {
+    font-size: 1.1rem;
+  }
+  .yn_transfer
+    .el-transfer-panel
+    .el-transfer-panel__header
+    .el-checkbox
+    .el-checkbox__label {
+    font-size: 1.1rem;
+  }
+  .yn_transfer .el-checkbox__label {
+    font-size: 1.1rem;
+  }
+  .yn_transfer.el-transfer {
+    font-size: 1.1rem;
+  }
+
+  /* 级联选择器 */
+  .el-cascader-panel {
+    font-size: 1.1rem !important;
+    padding: 1rem 0;
+    max-height: 300px;
+  }
+  .el-scrollbar__wrap {
+    overflow: auto !important;
+  }
+  .yn_cascader {
+    width: 100%;
+    position: relative;
+  }
+  .yn_cascader .el-input__inner {
+    height: 2.5rem;
+    border: 1px solid rgb(153, 151, 151);
+    font-size: 1.1rem;
+    color: #000;
+  }
+
+  /* .el-cascader__tags .el-tag {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: auto !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+} */
+
+  .el-cascader__tags .el-tag > span {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: auto !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .el-calendar-table .el-calendar-day {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 8px;
+    height: auto !important;
+  }
+  /* 级联选择器下拉框 */
+  .dowm_box {
+    position: absolute;
+    height: 20rem !important;
+    font-size: 1.2rem;
+    overflow: scroll;
+  }
+  /* 后续样式持续添加 */
+  .el-switch__label,
+  .el-radio__label {
+    span {
+      font-size: 1.2rem;
+    }
+  }
+  /* 数据统计 title */
+  .yn-chart {
+    background: #efefef;
+    color: #303133;
+    justify-content: space-between;
+  }
+  .yn-chart .chart-wrapper,
+  .chart-wrapper {
+    background: #fff;
+    padding: 16px 16px 0;
+    margin-bottom: 32px;
+  }
+  .yn-chart .el-alert__title {
+    font-size: 1.1rem;
+    color: #303133;
+  }
+  .yn-chart .el-form--inline .el-form-item {
+    margin: 0;
+  }
+
+  /* 弹出框 */
+  .el-dialog__header {
+    font-weight: bold;
+    background: linear-gradient(
+      -90deg,
+      rgba(43, 139, 239, 1),
+      rgba(45, 198, 255, 1)
+    );
+  }
+  .el-dialog__title {
+    color: #fff !important;
+    font-size: 1.1rem;
+  }
+  .el-dialog__close {
+    color: #fff !important;
+  }
+  /* 按钮颜色 */
+  .yesterday_btn {
+    background: #04cce4 !important;
+    border: 1px solid #fff !important;
+  }
+  .nextday_btn {
+    background: #a679f8 !important;
+    border: 1px solid #fff !important;
+  }
+  .today_btn {
+    background: #feae01 !important;
+    border: 1px solid #fff !important;
+  }
+
+  .yn-chart-title {
+    padding: 0.5rem 0px;
+  }
+  .yn-chart-title * {
+    background: #fbfcff !important;
+  }
+  .main_page > .yn-chart-title {
+    padding-bottom: 1.6rem;
+  }
+  .yn-chart-title .title {
+    font-size: 16px;
+    font-weight: 700;
+  }
+  .panel-group * {
+    /* background: #fbfcff; */
+    /* margin-top: 0 !important; */
+  }
+  .panel-group .card-panel {
+    background: #fbfcff;
+    padding: 0px 3rem;
+    border: 1px solid rgba(205, 221, 237, 1);
+    border-radius: 2px;
+  }
+  .panel-group .card-panel img.card-panel-icon-wrapper {
+    margin-left: 0 !important;
+    margin-right: 2rem !important;
+  }
+
+  .yn-chart-row {
+    padding: 1.5rem;
+    margin-bottom: 1.75rem !important;
+    border: 1px solid #cddded;
+    border-radius: 4px 4px;
+    background: #fbfcff;
+  }
+
+  .yn-chart-row .yn-chart-title,
+  .yn-chart-row .chart-wrapper,
+  .yn-chart-row .chart-wrapper * {
+    background: #fbfcff !important;
+  }
+  .yn-chart-title .yn-chart-title-btn {
+    padding: 4px 8px;
+    cursor: pointer;
+  }
+  .yn-chart-title-btn.blank {
+    border-bottom: 1px solid #2b8bef;
+    color: #2b8bef;
+  }
+
+  .title-query-bar {
+    /* padding: 1.2rem 0 0 0; */
+  }
+  .daily .yn-table-title {
+    padding: 0 0 1rem 0;
+  }
+  .level_Sel {
+    /deep/.el-select-dropdown__item:first-child {
+      color: red;
+    }
+    /deep/.el-select-dropdown__item:nth-child(2) {
+      color: rgb(255, 123, 0);
+    }
+    /deep/.el-select-dropdown__item:nth-child(3) {
+      color: rgb(252, 235, 2);
+    }
+    /deep/.el-select-dropdown__item:nth-child(4) {
+      color: rgb(0, 89, 255);
+    }
+  }
+  .calendar_pop {
+    padding: 0;
+    line-height: 22px;
+    .popper__arrow {
+      border-bottom-color: rgba(45, 159, 255, 1) !important;
+      &:after {
+        border-bottom-color: rgba(45, 159, 255, 1) !important;
+      }
+    }
+    .el-calendar__header {
+      background: linear-gradient(
+        -90deg,
+        rgba(10, 199, 253, 1),
+        rgba(45, 159, 255, 1)
+      );
+      .el-calendar__title {
+        color: #fff;
+      }
+      .el-button {
+        color: #fff;
+        background: transparent;
+      }
+    }
+  }
+  .yn_btn_box_inTable {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+
+   //新版导航切换按钮
+   .yn_page_btn{
+    text-align: left;
+    display: flex;
+    margin-bottom: 1rem; 
+    border-bottom: 1px solid #CDDDED;
+    width: 100%;
+    align-items: center;
+    .link_btn {
+        font-size: 1.4rem  ;
+        font-weight: bold;
+        padding: 1rem 3rem;
+        display: block; 
+       color: #2B8BEF;
+       border-bottom: 2px solid #0679F1;
+       text-decoration: none;
+       cursor:no-drop ;
+       margin-bottom: -2px;
+    }
+    .dis_btn{
+        color:#333;
+       border-bottom: none;
+       font-size:1.3rem;
+       cursor:pointer;
+       text-decoration: none;
+       padding: 1rem 3rem;
+       display: block;  
+
+    }
+  }
+
+  .td-pop {
+    background: rgba(255, 255, 255, 0.8);
+    box-shadow:0px 0px 5px 3px #8b8b8b;
+  }
+}

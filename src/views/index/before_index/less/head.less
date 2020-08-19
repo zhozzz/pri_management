@@ -1,0 +1,242 @@
+.head_nav {
+  position: relative;
+  width: 100%;
+  height: 6.214rem;
+  opacity: 1 !important;
+  background-image: url('~@/assets/beindex/title.png'),
+    url('~@/assets/beindex/head-nav.png');
+  background-repeat: no-repeat;
+  background-position: center center, center center;
+  background-size: 25.41% 66.66%, 103% 112%;
+  .prison_name {
+    font-size: 1.1rem;
+    position: absolute;
+    left: 50%;
+    bottom: -4px;
+    transform: translateX(-50%);
+    color: #fdfdfd;
+    font-weight: 600;
+  }
+  .head_menu {
+    position: absolute;
+    left: 0.5%;
+    width: 34%;
+    font-size: 1.14rem;
+    color: #43d3ff;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-around;
+    .nav_item {
+      text-align: center;
+      flex: 1;
+      position: relative;
+    white-space: nowrap;
+    width: 100%;
+      .nav_icon {
+        width: 100%;
+        height: 3.2rem;
+        display: flex;
+        align-items: center;
+        transform: skewX(-20deg);
+        img {
+          transform: skewX(20deg);
+          width: 1.2rem;
+          margin-left: 15%;
+        }
+        span {
+          transform: skewX(20deg);
+          font-size: 1.3rem;
+        }
+        &:hover {
+          .head_title_content {
+            color: #fff;
+          }
+          color: #fff;
+          text-shadow: 0 0 20px #fff;
+          box-shadow: 28px 0 28px -28px #006de0 inset,
+            0 28px 28px -28px #006de0 inset, 0 -28px 28px -28px #006de0 inset,
+            -28px 0 28px -28px #006de0 inset;
+        }
+        cursor: pointer;
+      }
+      .nav_menu {
+        max-height: 80vh;
+        position: absolute;
+        top: 3.2rem;
+        left: 50%;
+        transform: translateX(-50%);
+        overflow: auto;
+        z-index: 10000;
+        display: flex;
+        flex-wrap: nowrap;
+        font-size: 1.1rem;
+        border-radius: 2px;
+        background: rgba(12, 84, 139, 0.8);
+        box-shadow: 9px 16px 15px 0px rgba(11, 19, 48, 1),
+          0 0 50px 0 rgb(32, 114, 207) inset;
+        .menu_item {
+          flex: 1;
+          min-width: 11rem;
+          padding: 0 1.1rem;
+          text-align: center;
+          color: white;
+          .menu_title {
+            color: #f5db69;
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-top: 1.2rem;
+            padding-bottom: 1.1rem;
+            border-bottom: 1px solid #2b69dd;
+          }
+          .menu_list {
+            display: block;
+            text-decoration: none;
+            color: #82d2f7;
+            margin-top: 1.1rem;
+            cursor: pointer;
+            margin-bottom: 1rem;
+            &:hover {
+              color: #fff;
+              text-shadow: 0 0 3px #fff;
+            }
+          }
+        }
+      }
+      // 第一个菜单下拉拿出来单独做
+      .menu_child0 {
+        .nav_menu();
+        width: 540%;
+        left: 260%;
+        flex-wrap: wrap;
+
+      }
+
+      .min_menu{
+        width: 200%;
+        flex-wrap: wrap;
+        left: 90%;
+
+      }
+    }
+  }
+  .fade-enter-active,
+  .fade-leave-active {
+    transition: opacity 0s;
+  }
+  .fade-enter,
+  .fade-leave-to {
+    opacity: 0;
+  }
+  .head_right{
+    position: absolute; 
+    left: 64%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 34%;
+
+  }
+  .head_light {
+    position: absolute;
+    left: 50%;
+    transform: translate(-52%, 0);
+    top: 24%;
+    width: 50%;
+    height: 9.143rem;
+    background: url('~@/assets/beindex/light.png') no-repeat center center;
+    background-size: 100% 100%;
+    animation: headlightmove 4s infinite;
+  }
+ 
+  .head_time {
+    // height: 3.2rem;
+    // position: absolute;
+    // left: 79%;
+    font-size: 1.14rem;
+    color: #43d3ff;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+  }
+  .head_hk { 
+    cursor: pointer;
+    position: absolute;
+    right: 2px;
+    top:1.6rem;
+    .nav_icon {
+        width: 100%; 
+        display: flex;
+        align-items: center; 
+        img { 
+          width: 12px; 
+          height: 12px; 
+        }
+        span { 
+          font-size: 1.3rem;
+        }
+       
+      }
+  }
+  .head_week {
+    .head_time();
+    // left: 82%;
+  }
+  .head_date {
+    .head_time();
+    // left: 85%;
+  }
+  .head_video {
+    height: 3.2rem;
+    // position: absolute;
+    // left: 64%;
+    font-size: 1.14rem;
+    color: #43d3ff;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    white-space: nowrap;
+
+    .video_icon {
+      width: 1.5rem;
+      height: 1.5rem;
+      background: url('~@/assets/beindex/spjk.png') no-repeat center center;
+      background-size: contain;
+    }
+    a {
+        text-decoration: none;
+        color: #43d3ff
+      }
+  }
+  .head_home {
+    .head_video();
+    // left: 70%;
+    .home_icon {
+      width: 1.6rem;
+      height: 1.5rem;
+      background: url('~@/assets/beindex/home.png') no-repeat center center;
+      background-size: contain;
+    }
+
+  }
+  .head_quit {
+    .head_video();
+    // left: 94%;
+    cursor: pointer;
+    .quit_icon {
+      width: 1.5rem;
+      height: 1.5rem;
+      background: url('~@/assets/beindex/exit.png') no-repeat center center;
+      background-size: contain;
+    }
+  }
+  .head_download{
+    .head_video();
+    cursor: pointer;
+    font-size: 1.6rem;
+    // left: 92%;
+    text-decoration: none !important;
+
+  }
+}

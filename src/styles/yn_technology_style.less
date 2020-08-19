@@ -1,0 +1,688 @@
+/*css变量*/
+// 科技版的透明按钮
+.input_style {
+  background: transparent;
+  border: 1px solid #1471bd;
+  color: #d1d3d3;
+}
+// 边框带阴影
+.border_style {
+  border: 1px solid #7cdafd;
+  box-shadow: 28px 0 28px -28px #8fdcf9 inset, 0 28px 28px -28px #8fdcf9 inset,
+    0 -28px 28px -28px #8fdcf9 inset, -28px 0 28px -28px #8fdcf9 inset;
+}
+/*css变量*/
+.technology {
+  .yn_main {
+    background: radial-gradient(#084584, #042044);
+  }
+  .whole_page {
+    background: transparent !important;
+  }
+  // 全局修改loading颜色
+  .el-loading-mask {
+    background: rgba(0, 0, 0, 0.3);
+  }
+  /* 项目中页面最外层div类名，及标题的类名 */
+  .yn_page {
+    padding: 1rem;
+    padding: 20px;
+    background: transparent;
+  }
+  .yn_page_title {
+    display: block;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #fff;
+    font-weight: bold;
+  }
+  /* 修改ui框架的属性 */
+  /* 项目中用到的table都需要添加.yn_table类名保证字体自适应 */
+  .yn_table {
+    font-size: 1.1rem !important;
+  }
+  /* el-table的行高和padding */
+  .yn_table.el-table .cell {
+    line-height: 1.5rem !important;
+  }
+  .yn_table.el-table td,
+  .yn_table.el-table th {
+    padding: 0.5rem 0 !important;
+  }
+  .el-table {
+    border: 1px solid #416db3;
+    table,
+    .is-leaf,
+    tr,
+    th,
+    td {
+      border: 1px solid #416db3;
+    }
+  }
+  .el-table--border::after,
+  .el-table--group::after {
+    background: transparent;
+  }
+  .el-table--border::after,
+  .el-table--group::after,
+  .el-table::before {
+    background: transparent;
+  }
+  /* 所有btn需添加.yn_btn类名 */
+  .yn_btn {
+    width: 7rem;
+    height: 2.1rem;
+    line-height: 0 !important;
+    border-radius: 2px !important;
+    [class*=" el-icon-"],
+    [class^="el-icon-"] {
+      line-height: 0 !important;
+    }
+  }
+  .yn_btn.el-button {
+    background: transparent;
+    border: 1px solid #1974b9;
+    color: #fff;
+  }
+  .yn_btn.el-button--primary {
+    background: linear-gradient(#2cacff, #1683da);
+  }
+  /* type为text时的类名 */
+  .yn_text_btn {
+    height: 2.1rem;
+    line-height: 0 !important;
+  }
+  /* el-button的内边距和字体调整 */
+  .yn_btn.el-button {
+    padding: 12px 0 14px 0;
+  }
+  .yn_btn span {
+    font-size: 1.1rem;
+  }
+  .yn_text_btn.el-button {
+    padding: 12px 0 14px 0;
+  }
+  .yn_text_btn span {
+    font-size: 1.1rem;
+  }
+  .yn_long_btn {
+    width: 10rem;
+  }
+  .el-range-editor {
+    height: 2.5rem;
+    vertical-align: middle;
+    border: 1px solid rgb(153, 151, 151);
+    font-size: 1.1rem;
+    .input_style;
+  }
+
+  // echarts的修改
+  .yn_charts {
+    position: relative;
+    background: no-repeat url("~@/assets/technology/dialog_title_rest.png")
+      center top;
+    background-color: transparent;
+    background-size: 240% 32px;
+    border-radius: 2px;
+    padding: 0 20px 20px 20px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    color: #fff;
+    border: 1px solid #7cdafd;
+    box-shadow: 28px 0 28px -28px #8fdcf9 inset,
+      0 -28px 28px -28px #8fdcf9 inset, -28px 0 28px -28px #8fdcf9 inset;
+    h3 {
+      text-align: center;
+      margin: 0px 0 10px 0;
+      line-height: 18px;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      top: -8px;
+      left: 0;
+      height: 9px;
+      width: 100%;
+      background: no-repeat url("~@/assets/technology/dialog_title_top.png")
+        center center;
+      background-size: 240% 100%;
+      background-color: transparent;
+    }
+  }
+  // 科技版cofirm弹窗
+  .el-message-box {
+    .border_style();
+    background: rgba(16, 48, 98, 0.9);
+    .el-message-box__title {
+      color: #fff;
+    }
+    .el-message-box__headerbtn {
+      display: none;
+    }
+    .el-message-box__message {
+      color: #fff !important;
+      /deep/.el-form-item__label{
+        color: #fff !important;
+
+      }
+    }
+    .el-button--default {
+      background: transparent;
+      border: 1px solid #1974b9;
+      color: #fff;
+    }
+    .el-button--primary {
+      background: linear-gradient(#2cacff, #1683da);
+    }
+  }
+  /deep/input::-webkit-input-placeholder {
+    color: #e2e0e0 !important;
+  }
+  /deep/input::-moz-input-placeholder {
+    color: #e2e0e0 !important;
+  }
+  /deep/input::-ms-input-placeholder {
+    color: #e2e0e0 !important;
+  }
+  .yn_ipt {
+    /* input的类名.yn_ipt，保证自适应 */
+    .el-input__inner {
+      height: 2.5rem;
+      vertical-align: middle;
+      border: 1px solid rgb(153, 151, 151);
+      font-size: 1.1rem;
+      .input_style;
+    }
+    .el-textarea__inner {
+      border: 1px solid rgb(153, 151, 151);
+      font-size: 1.1rem;
+      .input_style;
+    }
+    .el-range__icon,
+    .el-range-separator,
+    .el-range__close-icon {
+      line-height: 1.8rem !important;
+      font-size: 1.1rem !important;
+    }
+    .el-range-input {
+      font-family: "MyriadProRegular";
+      font-size: 1.1rem !important;
+      background: transparent;
+      color: #d1d3d3;
+    }
+
+    span.el-range-separator {
+      color: #9ca6b7;
+      margin-top: 2px;
+      z-index: 0;
+    }
+    .el-input__inner:focus {
+      border: 1px solid rgb(153, 151, 151);
+    }
+    .el-input__inner:hover {
+      border: 1px solid rgb(153, 151, 151);
+    }
+    .el-input__icon {
+      line-height: 2.7rem;
+    }
+    .el-cascader__search-input {
+      font-size: 1.1rem;
+    }
+  }
+
+  /* 表单的样式 */
+  .yn_form .el-form-item__label {
+    font-size: 1.1rem;
+    color: #fff;
+  }
+  /* 穿梭框的样式 */
+  .yn_transfer
+    .el-transfer-panel
+    .el-transfer-panel__header
+    .el-checkbox
+    .el-checkbox__label
+    span,
+  .yn_transfer
+    .el-transfer-panel
+    .el-transfer-panel__header
+    .el-checkbox
+    .el-checkbox__label {
+    font-size: 1.1rem;
+  }
+  .yn_transfer {
+    /deep/.el-transfer-panel {
+      //   width: 30%;
+      background: transparent;
+      .border_style();
+      .el-transfer-panel__item.el-checkbox {
+        color: #fff;
+      }
+    }
+    .el-transfer__buttons {
+      padding: 0 1rem;
+      box-sizing: border-box;
+      //   width: 30%;
+      .el-button {
+        .yn_btn();
+        width: 5rem;
+      }
+    }
+    .el-transfer-panel .el-transfer-panel__header {
+      background: transparent;
+      border-bottom: 1px solid #1471bd;
+      .el-checkbox__label {
+        color: #fff;
+      }
+    }
+    /deep/.el-transfer-panel__body {
+      .el-transfer-panel__filter {
+        margin: 1rem 0;
+        padding: 0 1rem;
+        .yn_ipt();
+      }
+    }
+  }
+  .yn_transfer .el-checkbox__label {
+    font-size: 1.1rem;
+  }
+  .yn_transfer.el-transfer {
+    font-size: 1.1rem;
+  }
+
+  .el-radio-button__inner{
+      font-size: 1.1rem;
+      padding: 1rem 1.2rem;
+  }
+  /* 级联选择器 */
+  .el-cascader{
+    line-height: 35px !important;
+
+  }
+  .el-cascader-panel {
+    font-size: 1.1rem !important;
+    padding: 1rem 0;
+    max-height: 300px;
+  }
+  .el-scrollbar__wrap {
+    overflow: auto !important;
+  }
+  .yn_cascader {
+    width: 100%;
+    height: 2.5rem;
+    line-height: 1;
+    position: relative;
+  }
+  .yn_cascader .el-input__inner {
+    height: 2.5rem;
+    border: 1px solid #1471bd;
+    font-size: 1.1rem;
+    color: #fff;
+  }
+  .el-cascader__search-input {
+    background: transparent;
+  }
+  .el-cascader__tags .el-tag > span {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: auto !important;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 1.1rem;
+  }
+
+  .el-calendar-table .el-calendar-day {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 8px;
+    height: auto !important;
+  }
+  /* 级联选择器下拉框 */
+  .dowm_box {
+    position: absolute;
+    height: 20rem !important;
+    font-size: 1.2rem;
+    overflow: scroll;
+  }
+  /* 后续样式持续添加 */
+
+  .yn_dialog {
+    /* 弹出框 */
+    .el-dialog__header {
+      background: url("~@/assets/technology/dialog_title_rest.png") center
+        center;
+      background-size: 130% 100%;
+      background-color: transparent;
+      font-weight: bold;
+      padding: 3px 10px 15px;
+      border-left: 1px solid #0abcff;
+      border-right: 1px solid #0abcff;
+      box-shadow: 1.6rem 0 1.6rem -1.6rem #8fdcf9 inset,
+        -1.6rem 0 1.6rem -1.6rem #8fdcf9 inset;
+      /deep/.el-dialog__headerbtn {
+        display: none;
+      }
+      &:after {
+        content: "";
+        position: absolute;
+        top: -9px;
+        left: 0;
+        height: 9px;
+        width: 100%;
+        background: no-repeat url("~@/assets/technology/dialog_title_top.png")
+          center center;
+        background-size: 130% 100%;
+        background-color: transparent;
+      }
+    }
+    .el-dialog__body {
+      border-left: 1px solid #0abcff;
+      border-right: 1px solid #0abcff;
+      box-shadow: 1.6rem 0 1.6rem -1.6rem #8fdcf9 inset,
+        -1.6rem 0 1.6rem -1.6rem #8fdcf9 inset;
+      padding-left: 4.17%;
+    }
+    .el-dialog__footer {
+      border-left: 1px solid #0abcff;
+      border-right: 1px solid #0abcff;
+      border-bottom: 1px solid #0abcff;
+      box-shadow: 1.6rem 0 1.6rem -1.6rem #8fdcf9 inset,
+        -1.6rem 0 1.6rem -1.6rem #8fdcf9 inset,
+        0 -1.6rem 1.6rem -1.6rem #8fdcf9 inset;
+      padding-left: 4.17%;
+      padding-bottom: 30px;
+      text-align: center;
+      .yn_btn.el-button {
+        background: transparent;
+        border: 1px solid #1974b9;
+        color: #fff;
+      }
+      .yn_btn.el-button--primary {
+        background: linear-gradient(#2cacff, #1683da);
+      }
+    }
+    .el-dialog {
+      background: radial-gradient(#084584 55%, #022347);
+    }
+    .el-dialog__title {
+      color: #fff !important;
+      font-size: 1.3rem;
+      line-height: 18px;
+    }
+    // 弹出框中的form表单
+    .yn_form {
+      .el-form-item__content {
+        // margin-left: 0 !important;//文字和label之间是否换行
+        line-height: 35px;
+      }
+      .el-form-item__label {
+        text-align: right;
+        color: #fff;
+        line-height: 30px;
+      }
+    }
+    /deep/.el-table td,
+    /deep/.el-table th.is-leaf {
+      border-bottom: none !important;
+    }
+    /deep/.el-table--border,
+    /deep/.el-table--border td,
+    /deep/.el-table--border th,
+    /deep/.el-table--border tr {
+      border: none;
+    }
+    /deep/.el-upload--picture-card {
+      background: rgba(10, 10, 10, 0.5) !important;
+    }
+    /deep/.el-select {
+      width: 100%;
+    }
+    /deep/.el-input-number {
+      height: 2.5rem;
+      width: 100%;
+      .el-input {
+        height: 2.5rem;
+        line-height: 30px;
+      }
+      .el-input__inner {
+        height: 2.5rem;
+        .input_style;
+      }
+    }
+    .el-input.is-disabled .el-input__inner {
+      .input_style;
+      background: rgba(10, 10, 10, 0.5);
+    }
+    .el-cascader__tags {
+      color: #fff;
+    }
+  }
+  /deep/.el-table,
+  /deep/.el-table__expanded-cell {
+    background-color: transparent !important;
+  }
+  /deep/.el-table th,
+  /deep/.el-table tr {
+    background-color: transparent !important;
+  }
+  /deep/.el-table tr th {
+    color: #07e0e7;
+  }
+  /deep/.el-table tr td {
+    color: #fff;
+  }
+  /* 按钮颜色 */
+  .yesterday_btn {
+    background: #04cce4 !important;
+    border: 1px solid #04cce4 !important;
+  }
+  .nextday_btn {
+    background: #a679f8 !important;
+    border: 1px solid #a679f8 !important;
+  }
+  .today_btn {
+    background: #feae01 !important;
+    border: 1px solid #feae01 !important;
+  }
+
+  .yn-chart-title {
+    padding: 0.5rem 0px;
+  }
+  .yn-chart-title * {
+    background: #fbfcff !important;
+  }
+  .main_page > .yn-chart-title {
+    padding-bottom: 1.6rem;
+  }
+  .yn-chart-title .title {
+    font-size: 16px;
+    font-weight: 700;
+  }
+  .panel-group .card-panel {
+    background: #fbfcff;
+    padding: 0px 3rem;
+    border: 1px solid rgba(205, 221, 237, 1);
+    border-radius: 2px;
+  }
+  .panel-group .card-panel img.card-panel-icon-wrapper {
+    margin-left: 0 !important;
+    margin-right: 2rem !important;
+  }
+
+  .yn-chart-row {
+    padding: 1.5rem;
+    margin-bottom: 1.75rem !important;
+    border: 1px solid #cddded;
+    border-radius: 4px 4px;
+    background: #fbfcff;
+  }
+
+  .yn-chart-row .yn-chart-title,
+  .yn-chart-row .chart-wrapper,
+  .yn-chart-row .chart-wrapper * {
+    background: #fbfcff !important;
+  }
+  .yn-chart-title .yn-chart-title-btn {
+    padding: 4px 8px;
+    cursor: pointer;
+  }
+  .yn-chart-title-btn.blank {
+    border-bottom: 1px solid #2b8bef;
+    color: #2b8bef;
+  }
+
+  .daily .yn-table-title {
+    padding: 0 0 1rem 0;
+  }
+  .el-switch__label,
+  .el-radio__label {
+    color: #fff;
+    span {
+      font-size: 1.2rem;
+    }
+  }
+  .el-radio__label {
+    font-size: 1.2rem;
+  }
+  .el-tree--highlight-current
+    .el-tree-node.is-current
+    > .el-tree-node__content {
+    background: rgba(7, 43, 91, 0.5);
+    color: #3ec6f1;
+  }
+  .el-table__body tr.current-row > td {
+    background: #042044 !important;
+  }
+  .el-table__body tr:hover > td {
+    background: #042044 !important;
+  }
+  .el-upload-list__item-name {
+    color: #fff;
+  }
+  .el-calendar {
+    background: transparent;
+    color: #fff;
+    .el-calendar__title {
+      color: #fff;
+    }
+    .border_style;
+    .el-button-group > .el-button {
+      .input_style;
+    }
+  }
+  .el-calendar-table thead th {
+    color: #fff;
+  }
+  .el-popover {
+    background: rgb(5, 47, 101);
+    color: #fff;
+    .border_style();
+    .el-popover__title {
+      color: #fff;
+    }
+  }
+  .level_Sel {
+    /deep/.el-select-dropdown__item:first-child {
+      color: red;
+    }
+    /deep/.el-select-dropdown__item:nth-child(2) {
+      color: rgb(255, 123, 0);
+    }
+    /deep/.el-select-dropdown__item:nth-child(3) {
+      color: rgb(252, 235, 2);
+    }
+    /deep/.el-select-dropdown__item:nth-child(4) {
+      color: rgb(0, 89, 255);
+    }
+  }
+  .quill-editor {
+    color: #fff;
+    /deep/.ql-snow.ql-toolbar button .ql-stroke {
+      stroke: #fff;
+    }
+    /deep/.ql-snow .ql-stroke {
+      stroke: #fff;
+    }
+    /deep/.ql-snow .ql-picker-label {
+      color: #fff;
+      line-height: 24px;
+    }
+    /deep/.ql-snow .ql-picker {
+      color: #fff;
+      line-height: 24px;
+    }
+    /deep/.ql-snow .ql-picker-options {
+      background: #084584;
+    }
+    /deep/.ql-snow.ql-toolbar button .ql-fill {
+      fill: #fff;
+    }
+    /deep/.ql-toolbar.ql-snow {
+      border: 1px solid #7cdafd;
+    }
+    /deep/ .ql-container.ql-snow {
+      border: 1px solid #7cdafd;
+      border-top: none;
+    }
+  }
+  .calendar_pop {
+    padding: 0;
+    line-height: 22px;
+    .popper__arrow {
+      border-bottom-color: rgba(45, 159, 255, 1) !important;
+      &:after {
+        border-bottom-color: rgba(45, 159, 255, 1) !important;
+      }
+    }
+    .el-calendar__header {
+      background: linear-gradient(
+        -90deg,
+        rgba(10, 199, 253, 1),
+        rgba(45, 159, 255, 1)
+      );
+      .el-calendar__title {
+        color: #fff;
+      }
+      .el-button {
+        color: #fff;
+        background: transparent;
+      }
+    }
+  }
+  .yn_btn_box_inTable {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  //新版导航切换按钮
+  .yn_page_btn{
+    text-align: left;
+    display: flex;
+    margin-bottom: 1rem; 
+    border-bottom: 1px solid rgb(20, 113, 189);
+    width: 100%;
+    align-items: center;
+
+    .link_btn {
+        font-size: 1.4rem  ;
+        font-weight: bold;
+        padding: 1rem 3rem;
+        display: block; 
+       color: #2B8BEF;
+       border-bottom: 2px solid #0679F1;
+       text-decoration: none;
+       cursor:no-drop ;  
+        margin-bottom: -2px;
+    }
+    .dis_btn{
+        color: #fff;
+        font-weight: bold;
+        font-size: 1.3rem;
+       border-bottom: none;
+       cursor:pointer;
+       text-decoration: none;
+       padding: 1rem 3rem;
+       display: block; 
+    }
+  }
+}

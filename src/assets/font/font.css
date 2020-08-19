@@ -1,0 +1,18 @@
+/* @font-face {
+  font-family: 'MicrosoftYaHei';
+  src: url('MicrosoftYaHei.ttf');
+  font-weight: normal;
+  font-style: normal;
+} */
+/* @font-face {
+  font-family: 'MicrosoftYaHeiBold';
+  src: url('MicrosoftYaHei-Bold.ttf');
+  font-weight: normal;
+  font-style: normal;
+} */
+@font-face {
+  font-family: 'MyriadProRegular';
+  src: url('MyriadProRegular.otf');
+  font-weight: normal;
+  font-style: normal;
+}

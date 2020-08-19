@@ -1,0 +1,240 @@
+<!--
+ * @Description:
+ * @Author: wentoo
+ * @Github:
+ * @Date: 2019-09-06 15:35:33
+ * @LastEditors: zhuhao
+ * @LastEditTime: 2020-03-25 14:33:18
+ -->
+
+<template>
+  <el-row class="whole_page" v-loading="treeLoading" :style="wholeStyle">
+    <div
+      class="arrow"
+      v-if="prisonId==='1'||deptType=='指挥中心'"
+      :style="{left: pageIsOpen ? '16.30%' : '-0.4%',width: '25px'}"
+    >
+      <img
+        v-if="theme==2"
+        :src="pageIsOpen ? require('@/assets/index/closearrow.png') : require('@/assets/index/openarrow.png')"
+        @click="pageIsOpen=!pageIsOpen"
+        style="width:100%"
+      />
+      <img
+        v-else-if="theme==1"
+        :src="pageIsOpen ? require('@/assets/index/closearrow2.png') : require('@/assets/index/openarrow2.png')"
+        @click="pageIsOpen=!pageIsOpen"
+        style="width:50%;margin-left:28%"
+      />
+    </div>
+    <el-col :span="pageIsOpen ? 4 : 0" v-if="prisonId==='1'||deptType=='指挥中心'" class="page_left">
+      <el-tree
+        :data="prisondata"
+        @node-click="nodeClick"
+        :props="defaultProps"
+        highlight-current
+        node-key="id"
+        ref="tree"
+        :expand-on-click-node="false"
+        element-loading-text="加载中"
+        element-loading-spinner="el-icon-loading"
+        element-loading-background="rgba(0, 0, 0, 0.5)"
+      ></el-tree>
+    </el-col>
+    <el-col
+      :span="prisonId==='1'||deptType=='指挥中心'?pageIsOpen ? 20 : 24:24"
+      :offset="prisonId==='1'||deptType=='指挥中心'?pageIsOpen ? 4 : 0:0"
+      class="page_right"
+      :style="rightStyle"
+    >
+      <div>
+        <slot></slot>
+      </div>
+    </el-col>
+  </el-row>
+</template>
+<script>
+import { getPrisonId, getDeptType } from '@/utils'
+export default {
+  model: {
+    prop: 'value',
+    event: 'input'
+  },
+  props: {
+    value: {
+      required: true
+    },
+    backData: {
+      type: Boolean,
+      default: false
+    }
+  },
+  data() {
+    return {
+      theme: localStorage.getItem('theme'),
+      wholeStyle: {
+        backgroundColor:
+          this.$route.name === 'main_page' ? '#1F54AF' : '#FBFCFF'
+      },
+      rightStyle: {
+        borderLeft:
+          this.$route.name !== 'main_page'
+            ? '1px solid rgba(205,221,237,1)'
+            : 'none',
+        backgroundColor: this.$route.name === 'main_page' ? '#0d386b' : '#fff'
+      },
+      pageIsOpen: true,
+      treeLoading: false,
+      priType: '',
+      prisonId: getPrisonId(),
+      deptType: getDeptType(),
+      prisondata: [],
+      defaultProps: {
+        children: 'list',
+        label: 'departName'
+      },
+      deptTpyeList: []
+    }
+  },
+  mounted() {
+    this.getpridata()
+    this.getDeptType()
+  },
+  methods: {
+    getDeptType() {
+      let that = this
+      this.axios
+        .get(this._global.userUrl + '/dictionary/option/ORGANIZATION')
+        .then(response => {
+          this.deptTpyeList = response
+        })
+        .catch(error => {
+          console.log(error)
+        })
+    },
+    getpridata() {
+      let that = this
+
+      this.treeLoading = true
+
+      this.axios
+        .get(this._global.userUrl + '/compose/getChildrenTree/' + this.prisonId)
+        .then(response => {
+          that.prisondata = [response]
+          // 设置默认选中高亮
+          if (this.prisonId == 1) {
+            this.$nextTick(function() {
+              // this.$refs.tree.setCurrentKey('1')
+            })
+          }
+          this.treeLoading = false
+        })
+        .catch(error => {
+          console.log(error)
+
+          this.treeLoading = false
+        })
+    },
+    nodeClick(data, node, arr) {
+      let val = data
+
+      val.isPrison = false
+      this.deptTpyeList.map(item => {
+        if (item.label === '监狱' || item.label === '省局') {
+          if (val.departType == item.value) {
+            val.isPrison = true
+            val.prisonId = val.id
+          }
+        }
+      })
+      if (!val.isPrison) {
+        val.prisonId = this.selPrisonId(node)
+      }
+      console.log(val)
+
+      this.$emit('input', val)
+    },
+    selPrisonId(node) {
+      let prison = null
+      this.deptTpyeList.map(item => {
+        if (item.label === '监狱' || item.label === '省局') {
+          if (node.data.departType == item.value) {
+            prison = node.data.id
+          }
+        }
+      })
+
+      if (prison == null) {
+        return this.selPrisonId(node.parent)
+      } else {
+        return prison
+      }
+    }
+  }
+}
+</script>
+<style lang="less" scoped>
+/deep/.el-tree-node__label {
+  font-size: 1.2rem;
+}
+.standard {
+  .arrow {
+    position: fixed;
+    top: 25rem;
+    z-index: 100;
+  }
+  .page_left {
+    padding-top: 1rem;
+    box-shadow: 4px 0px 6px 0px rgba(11, 28, 61, 0.15);
+    position: fixed;
+    top: 5.71429rem;
+    bottom: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  .page_right {
+    box-shadow: 4px 0px 6px 0px rgba(11, 28, 61, 0.15) inset;
+  }
+}
+.technology {
+  .el-tree {
+    color: #fff;
+    background: transparent !important;
+    padding-bottom: 2rem;
+    // focus的颜色
+    /deep/.el-tree-node .el-tree-node.is-focusable:focus {
+      .el-tree-node__content {
+        background: #042044;
+      }
+    }
+    // 鼠标悬浮的颜色
+    /deep/.el-tree-node__content:hover {
+      background: #042044;
+    }
+    // focus过后点击鼠标显示的颜色
+    /deep/.el-tree-node.is-current > .el-tree-node__content {
+      background: #042044 !important;
+    }
+  }
+  .arrow {
+    position: fixed;
+    top: 25rem;
+    z-index: 100;
+  }
+  .page_left {
+    padding-top: 1rem;
+    box-shadow: 4px 0px 6px 0px rgba(11, 28, 61, 0.15);
+    background: #054284;
+    position: fixed;
+    top: 5.71429rem;
+    bottom: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+  }
+  .page_right {
+    box-shadow: 4px 0px 6px 0px rgba(11, 28, 61, 0.15) inset;
+    background-color: transparent !important;
+    border: none !important;
+  }
+}
+</style>

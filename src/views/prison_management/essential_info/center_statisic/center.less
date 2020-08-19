@@ -1,0 +1,523 @@
+
+.pages {
+    //   padding-top: 15rem;
+    //   margin-top: 15rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    box-sizing: border-box;
+    height: calc(100vh - 15rem);
+    overflow: scroll;
+  }
+  
+  #criminal_info,
+  #criminal_type,
+  #prison_info {
+    padding-top: 1rem;
+  }
+  .header {
+    //   position: fixed;
+    //   top: 5.71429rem;
+    //   background: #fff;
+    //   padding: 1rem;
+    width: 100%;
+    z-index: 1111;
+    height: 17rem;
+    overflow: scroll;
+  }
+  .head_btn {
+    margin-bottom: 10px;
+  }
+  .btn_box {
+    width: 100%;
+    text-align: center;
+    margin: 4rem 0;
+    display: flex;
+    justify-content: center;
+  }
+  .menus {
+      width: 12rem;
+    position: fixed;
+    top: 50%;
+    right: 0;
+    background: #559ce7;
+    padding: 1rem;
+    z-index: 1200;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    div {
+      margin: 1rem 0;
+      color: #fff;
+      cursor: pointer;
+      white-space: nowrap;
+      &:hover {
+        color: #fd9b0b;
+      }
+    }
+    .arrow {
+        position: absolute;
+        top: 20%;
+        z-index: 100;
+        img{
+            width: 100%;
+            transform: rotateY(180deg);
+        }
+      }
+  }
+  /deep/.el-switch__label * {
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+  
+  .time_box {
+    display: flex;
+    align-items: center;
+    font-size: 1.1rem;
+    margin: 1rem 0;
+    .yn_date_picker {
+      margin: 0 1rem;
+      width: 15rem;
+    }
+  }
+  
+  .moudek_head {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 1.4rem;
+    margin: 2rem 0 1rem;
+    .icon_img {
+      font-size: 2.5rem;
+      margin-right: 0.5rem;
+    }
+    .head_name {
+      border: 1px solid #ccc;
+      padding: 0.2rem 0.5rem;
+    }
+  }
+  .police_table {
+    width: 90%;
+    border: 1px solid #ccc;
+    font-size: 1.1rem;
+    margin: 2rem 5%;
+    /deep/.el-input__inner {
+      padding: 4px 0;
+      width: 5rem;
+      text-indent: 2px;
+    }
+    .el-input.is-disabled {
+      border: none;
+      background-color: #fff;
+      width: 5rem;
+      /deep/ .el-input__inner {
+        color: #fd9b0b ;
+        background-color: #fff;
+        border: none;
+      }
+    }
+  }
+  .setInputWidth {
+    /deep/.el-input__inner {
+      width: 100%;
+      color: #000 !important;
+    }
+    .el-input.is-disabled {
+      width: 100%;
+    }
+  }
+  
+  .table_ipt {
+    width: 5rem;
+  
+    .el-input__inner {
+      width: 5rem;
+    }
+  }
+  
+  .img_box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .green {
+      color: #14c2a5;
+    }
+    .red {
+      color: #ea5c1d;
+    }
+  
+    img {
+      width: 100%;
+      height: 3rem;
+      transform: rotateX(20deg);
+    }
+  }
+  .col_img {
+    //   position: relative;
+    img {
+      // position: absolute;
+      // top: 0;
+      // left: 50%;
+      // transform: translateX(-50%);
+      width: 3rem;
+      height: 7rem;
+    }
+  }
+  .row_box {
+    width: 100%;
+    border: 1px solid #cddded;
+    padding: 2rem;
+    background: #fbfcff;
+  }
+  .card_box {
+    width: 100%;
+    border: 1px solid #cddded;
+    border-radius: 4px;
+    background: #eef8ff;
+    padding: 2rem 1rem;
+    //   text-align: center;
+    .card_head {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.4rem !important;
+      margin: 1rem 0;
+    }
+  
+    /deep/.el-input.is-disabled {
+      background-color: rgba(238, 248, 255, 1) !important;
+  
+      /deep/ .el-input__inner {
+        background-color: rgba(238, 248, 255, 1) !important;
+      }
+    }
+  }
+  .card_box_org {
+    background: #fff6f1;
+    border: 1px solid #f3e4e1;
+    /deep/.el-input.is-disabled {
+      background-color: #fff6f1 !important;
+  
+      /deep/ .el-input__inner {
+        background-color: #fff6f1 !important;
+      }
+    }
+  }
+  .card_box_deepblue {
+    background: #eff3ff;
+    border: 1px solid #e0e8f3;
+    /deep/.el-input.is-disabled {
+      background-color: #eff3ff !important;
+  
+      /deep/ .el-input__inner {
+        background-color: #eff3ff !important;
+      }
+    }
+  }
+  .card_box_green {
+    background: #e8fdff;
+    border: 1px solid #cfe3e2;
+    /deep/.el-input.is-disabled {
+      background-color: #e8fdff !important;
+  
+      /deep/ .el-input__inner {
+        background-color: #e8fdff !important;
+      }
+    }
+  }
+  .td_row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .btn_box {
+    width: 100%;
+    box-sizing: border-box;
+    text-align: left;
+    padding: 1rem 2rem 5px 2rem;
+  }
+  .sql_num {
+    color: #4a8ae8;
+    font-size: 1.1rem;
+    white-space: nowrap;
+  }
+  .td_box {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    /deep/.el-input__inner {
+      padding: 4px 0;
+      width: 5rem;
+      background-color: #dadbdc;
+      text-indent: 2px;
+    }
+    /deep/.yn_ipt .table_ipt .el-input {
+      width: 5rem;
+    }
+  }
+  .history_box {
+    /deep/.el-input__inner {
+      background-color: #fff !important;
+    }
+  }
+  
+  .diy_items {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    font-size: 1.2rem;
+    margin: 1rem 0;
+    .items_name,
+    .items_type {
+      width: 40%;
+    }
+    .items_icon {
+      width: 10%;
+      text-align: center;
+      color: red;
+      cursor: pointer;
+    }
+  }
+
+.errTitle{
+    color: red !important;
+}
+  //分割线
+  .split_line{
+    width: 100%;
+    padding: 1rem ;
+    border-bottom: 2px solid #7cdafd;
+    font-size: 1.6rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    .errState{
+        color: red;
+    }
+    .sucState{
+        color: #559ce7;
+    }
+    .noState{
+        color: rgb(247, 185, 0);
+    }
+    .split_info{
+        font-size: 0.8rem;
+        font-weight: 500;
+        color: #333;
+        img {
+            width: 1.4rem;
+            height: 1.4rem;
+          }
+    }
+  }
+
+  //右侧日历
+  .criminalRemarks {
+    display: flex;
+    .criminalRemarksLable {
+      width: 40px;
+    }
+    .criminalRemarksList {
+      flex: 1;
+    }
+  }
+
+  
+  .header_box {
+    position: relative;
+  }
+  .right_date {
+    //   top: -3rem;
+    //   right: 1em;
+    width: 100%;
+    display: flex;
+    height: 100%;
+    justify-content: flex-end;
+    align-items: center; 
+    .calendar_btn{
+      position: absolute;
+      right: 0;
+      top: 1rem;
+    }
+    .calendar {
+      width: 30rem;
+    //   position: relative;
+      position: absolute;
+      bottom: 0;
+      border: 1px solid #559ce7;
+      border-radius: 4px;
+      padding: 4px; 
+      .el-icon-error{
+          font-size: 18px;
+          color: red;
+          position: absolute;
+          top: -9px;
+          right: -9px;
+      }
+      /deep/ .el-calendar {
+        .el-calendar__header {
+          padding: 0.1rem;
+          .el-button--mini{
+              font-size: 0.8rem;
+              padding: 3px 6px;
+          }
+        }
+        .el-calendar__body {
+          padding: 0.1rem;
+        }
+        .el-calendar-table {
+          thead {
+            th {
+              padding: 2px 0;
+            }
+          }
+          tbody{
+              td {
+                pointer-events: none
+              }
+          }
+          /deep/td.is-selected {
+            color: #1989fa;
+            background-color: #72aaf3;
+          }
+          /deep/.el-calendar-day:hover{
+            background-color: #559dfa;
+ 
+         }
+         .outDate{ 
+            color: #C0C4CC;
+            cursor: no-drop;
+          }
+          .inDate{
+            
+            pointer-events: auto
+
+          }
+        }
+        td {
+          /deep/.el-calendar-day {
+            height: 24/14rem !important;
+            padding: 0px;
+            text-align: center;
+            line-height: 24/14rem;
+          }
+        }
+      }
+    }
+  }
+  .pop_main{
+      font-size: 1.2rem;
+      padding: 1px;
+  }
+  .technology {
+    .header {
+      // background: rgba(17, 28, 108, 0.6);
+      // background: transparent;
+  
+      // border: 1px solid #7cdafd;
+      // box-shadow: 28px 0 28px -28px #8fdcf9 inset, 0 28px 28px -28px #8fdcf9 inset,
+      //   0 -28px 28px -28px #8fdcf9 inset, -28px 0 28px -28px #8fdcf9 inset;
+      div {
+        color: #fff;
+      }
+    }
+    .calendar{
+        border: none;
+    }
+    .moudek_head .icon_img,
+    .time_box,
+    .head_name,
+    .police_table,
+    .diy_items,
+    .split_info,
+    .pop_main,
+    .split_line {
+      color: #fff;
+    }
+    .history_box /deep/.el-input__inner,
+    .police_table /deep/.el-input.is-disabled {
+      background: transparent !important;
+      color: #606266;
+    }
+    .police_table {
+      border: 1px solid #7cdafd;
+    }
+    .police_table /deep/.table_ipt input {
+      background: rgba(75, 173, 238, 0.5);
+    }
+    .row_box {
+      background: transparent;
+      border: 1px solid #7cdafd;
+    }
+    .card_box {
+      background: transparent;
+      color: #fff;
+   
+  
+      /deep/.el-input.is-disabled {
+        background-color: transparent !important;
+        /deep/ .el-input__inner {
+          background-color: transparent !important;
+        }
+      }
+      
+    }
+    .card_box_org {
+        background: rgba(221, 90, 33, 1);
+        border: 1px solid #dd5a21; 
+     
+
+        /deep/.el-input.is-disabled {
+          background-color: rgba(221, 90, 33, 1) !important;
+      
+          /deep/ .el-input__inner {
+            background-color: rgba(221, 90, 33, 1) !important;
+          }
+        }
+      }
+      .card_box_deepblue {
+        border: 1px solid #7cdafd;
+        box-shadow: 28px 0 28px -28px #8fdcf9 inset, 0 28px 28px -28px #8fdcf9 inset,
+          0 -28px 28px -28px #8fdcf9 inset, -28px 0 28px -28px #8fdcf9 inset;
+        /deep/.el-input.is-disabled {
+          background-color: transparent !important;
+      
+          /deep/ .el-input__inner {
+            background-color: transparent !important;
+          }
+        }
+      }
+      .card_box_green {
+        background: #2bc8ba;
+        border: 1px solid #2bc8ba;
+       
+        /deep/.el-input.is-disabled {
+          background-color: #2bc8ba !important;
+        
+      
+          /deep/ .el-input__inner {
+            background-color: #2bc8ba !important;
+       
+
+          }
+        }
+      }
+    .img_box {
+      color: #fff;
+    }
+    .menus {
+      background: transparent;
+  
+      border: 1px solid #7cdafd;
+      box-shadow: 28px 0 28px -28px #8fdcf9 inset, 0 28px 28px -28px #8fdcf9 inset,
+        0 -28px 28px -28px #8fdcf9 inset, -28px 0 28px -28px #8fdcf9 inset;
+      div {
+        color: #fff;
+      }
+    }
+  }

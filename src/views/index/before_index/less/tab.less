@@ -1,0 +1,153 @@
+
+.main {
+  position: absolute;
+  left: 69.7%;
+  width: 28.7%;
+  top: 5.85rem;
+  bottom: 0;
+  z-index: 1000;
+  .openImgs{
+      width: 3rem;
+      height: 5rem;
+      position: absolute;
+      top: 10%;
+    //   transform: translateY(-50%);
+      left: -2rem;
+      img{
+          transform: rotateZ(180deg);
+      }
+  }
+  .tab_btn{
+      right: 0; 
+      color: #fff;
+      text-align: right
+  }
+  .main_tab {
+    position: relative;
+    background: url('~@/assets/beindex/groupbg.png') no-repeat center center;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 29.7%;
+    margin-bottom: 3.63%;
+    .tab_title {
+      position: absolute;
+      right: 11.6%;
+      width: 10rem;
+      height: 5.6%;
+      text-align: right;
+      font-size: 1.29rem;
+      font-weight: 600;
+      color: rgba(4, 250, 252, 1);
+      line-height: 2.79rem;
+    }
+    .tab_title_icon_left {
+      position: absolute;
+      right: 8%;
+      top: 4%;
+      width: 0.85rem;
+      height: 1.3rem;
+      background: url('~@/assets/beindex/lefticon.png') no-repeat center center;
+      background-size: 100% 100%;
+      animation: leftright 0.7s infinite;
+    }
+    .tab_title_icon_right {
+      position: absolute;
+      right: 6%;
+      top: 4%;
+      width: 0.85rem;
+      height: 1.3rem;
+      background: url('~@/assets/beindex/lefticon.png') no-repeat center center;
+      background-size: 100% 100%;
+      animation: leftright 0.7s infinite;
+      animation-delay: 0.5s;
+    }
+    .flex {
+      position: absolute;
+      top: 29%;
+      bottom: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      .detail {
+        width: 40%;
+        .detail_title {
+          text-align: center;
+          .detail_title_title {
+            width: 12%;
+            height: 5.6%;
+            font-size: 1.14rem;
+            font-weight: bold;
+            color: rgba(255, 255, 255, 1);
+            line-height: 1.43rem;
+          }
+          .detail_title_num {
+            width: 0.091%;
+            height: 6.3%;
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: rgba(4, 250, 252, 1);
+            line-height: 1.43rem;
+          }
+          .detail_title_g {
+            width: 2%;
+            height: 1.8%;
+            font-size: 0.714rem;
+            font-weight: bold;
+            color: rgba(82, 120, 182, 1);
+            line-height: 1.43rem;
+          }
+        }
+        .police_detail_img {
+          width: 100%;
+          height: 75%;
+          background: url('~@/assets/beindex/police.png') no-repeat center top,
+            url('~@/assets/beindex/table2.png') no-repeat center bottom;
+          background-size: 30% 53%, 70% 80%;
+          animation: myfirst 2s infinite;
+        }
+        .criminal_detail_img {
+          width: 100%;
+          height: 70%;
+          background: url('~@/assets/beindex/criminal.png') no-repeat center top,
+            url('~@/assets/beindex/table.png') no-repeat center bottom;
+          background-size: 30% 55%, 70% 85%;
+          animation: myfirst1 2s infinite;
+        }
+      }
+    }
+    .rank_table {
+      position: absolute;
+      top: 20%;
+      left: 50%;
+      overflow: scroll;
+      transform: translate(-50%, 0);
+      bottom: 0;
+      width: 90%;
+      /deep/.el-table td,
+      /deep/.el-table th {
+        padding: 7px 0;
+      }
+      /deep/.el-table td,
+      /deep/.el-table th.is-leaf {
+        border-bottom: none !important;
+      }
+      /deep/.el-table,
+      /deep/.el-table__expanded-cell {
+        background-color: transparent !important;
+      }
+      /deep/.el-table th,
+      /deep/.el-table tr {
+        background-color: transparent !important;
+      }
+      /deep/.el-table tr th {
+        color: #07e0e7;
+      }
+      /deep/.el-table tr td {
+        color: #fff;
+      }
+    }
+    .line_echarts {
+      padding-top: 10%;
+    }
+  }
+}
